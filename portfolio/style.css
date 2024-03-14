@@ -54,6 +54,18 @@ header .logo {
     font-weight: 700;
 }
 
+.institution {
+    display: flex;
+    align-items: center; /* Centers the logo and header vertically */
+}
+
+.edu-logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio intact */
+    margin-right: 10px; /* Adds some space between the logo and the header text */
+}
+
+
 nav ul {
     list-style: none;
     display: flex;
