@@ -1,8 +1,0 @@
-Color Scheme: Vulcan
-gray: #343335 (background)
-white: #ffffff
-blue: #83c4f2
-
-Font: Inter
-
-Logo: 'Drew Meyer'

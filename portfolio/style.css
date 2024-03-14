@@ -65,7 +65,53 @@ header .logo {
     margin-right: 10px; /* Adds some space between the logo and the header text */
 }
 
+/* ++++++++++++++++++++++++++++++ PROJECTS/RESEARCH CARD STYLING ++++++++++++++++++++++++++++++ */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the card container */
+}
 
+.card {
+    background: #343335; /* Set the background color to gray */
+    border: 2px solid #ffffff; /* Add a white border for the outline */
+    color: #333333; /* Text color, change as needed */
+    width: calc(33.333% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #ffffff
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* ++++++++++++++++++++++++++++++ PROJECTS/RESEARCH CARD STYLING ++++++++++++++++++++++++++++++ */
 nav ul {
     list-style: none;
     display: flex;
@@ -82,6 +128,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* ++++++++++++++++++++++++++++++++++++++++ HERO @ INDEX ++++++++++++++++++++++++++++++++++++++++ */
 .hero {
     display: flex;
     flex-direction: column;
@@ -107,7 +154,11 @@ nav ul li a {
     height: auto; /* Maintains the aspect ratio of the image */
     border-radius: 10px; /* Optional: Adds rounded corners to the image */
 }
+/* ++++++++++++++++++++++++++++++++++++++++ HERO @ INDEX ++++++++++++++++++++++++++++++++++++++++ */
 
+
+
+/* +++++++++++++++++++++++++++++++++++ FOOTER +++++++++++++++++++++++++++++++++++ */
 footer {
     display: flex;
     justify-content: space-between;
@@ -130,7 +181,18 @@ footer .socials a {
     margin: 0 10px; /* Spacing between social links, adjust as needed */
     text-decoration: none; /* Remove the underline from links */
 }
+/* +++++++++++++++++++++++++++++++++++ FOOTER +++++++++++++++++++++++++++++++++++ */
 
+
+/* Existing styles for .about-image img */
+.about-image img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+/* +++++++++++++++++++++++++++++++++++ MEDIA +++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 768px) {
     header, footer {
         flex-direction: column;
@@ -147,13 +209,6 @@ footer .socials a {
     }
 }
 
-/* Existing styles for .about-image img */
-.about-image img {
-    width: 100%; /* Responsive image width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-
 /* Media query for screens wider than 1024px */
 @media (min-width: 1024px) {
     .about-image img {
@@ -163,3 +218,16 @@ footer .socials a {
         margin: 0 auto; /* Center the image horizontally within its container */
     }
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width cards on very small screens */
+    }
+}
+/* +++++++++++++++++++++++++++++++++++ MEDIA  +++++++++++++++++++++++++++++++++++ */

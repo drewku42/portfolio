@@ -17,3 +17,9 @@ The website is designed with a minimalist aesthetic, focusing on ease of navigat
 - **Education**: Information about my educational background.
 - **Projects/Research**: Showcases my key projects and research initiatives.
 - **Blog**: A section for my latest blog posts and thoughts on various topics.
+
+## Styling
+- Color Scheme: Vulcan
+- gray: #343335 (background)
+- white: #ffffff
+- Font: Inter
