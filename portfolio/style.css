@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-html {
-    height: 100%;
+/* Apply box-sizing border-box to all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
-body, html {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
@@ -26,22 +28,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px; /* Presumed current header padding */
     background-color: #83c4f2;
 }
 
-header nav ul {
+header .logo {
+    font-size: 1.5rem; /* Example size, adjust as needed */
+    color: #ffffff;
+    font-weight: 700;
+}
+
+nav ul {
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0;
 }
 
-header nav ul li {
+nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
 }
@@ -52,20 +60,20 @@ header nav ul li a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px; /* Adjusted to match header padding for consistent height */
     background-color: #83c4f2;
 }
 
 footer p, footer a {
     color: #ffffff;
     text-decoration: none;
-    margin-right: 15px;
 }
 
 footer .socials {
@@ -74,32 +82,22 @@ footer .socials {
 }
 
 footer .socials a {
-    margin: 0 10px;
+    margin: 0 10px; /* Spacing between social links, adjust as needed */
     text-decoration: none; /* Remove the underline from links */
 }
 
-/* Remove the pipe separator from the social links in the footer */
-footer .socials a:not(:last-child)::after {
-    content: '';
-    margin: 0;
-}
-
 @media screen and (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    footer {
+    header, footer {
         flex-direction: column;
         text-align: center;
+        padding: 20px; /* Adjust padding for smaller screens */
     }
-    
-    footer p, footer .socials {
-        margin-top: 10px;
+
+    header .logo, nav ul, footer p, footer .socials {
+        margin-bottom: 10px; /* Add some space between stacked items on small screens */
+    }
+
+    nav ul li, footer .socials a {
+        margin: 0; /* Remove margins for list items when stacked */
     }
 }
