@@ -14,6 +14,21 @@ html, body {
     color: #ffffff;
 }
 
+h1 {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+/* Add line-height to h2 for about-description */
+.about-description h2 {
+    line-height: 1.6; /* Adjust this value as needed for optimal readability */
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -29,7 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px; /* Presumed current header padding */
-    background-color: #83c4f2;
+    background-color: #1c1c1c;
 }
 
 header .logo {
@@ -63,12 +78,29 @@ nav ul li a {
     padding: 20px;
 }
 
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; /* Adjust as needed for spacing around the container */
+}
+
+.about-image, .about-description {
+    flex: 1; /* Allows both child containers to take up equal width */
+    padding: 20px; /* Add padding for spacing inside the containers */
+}
+
+.about-image img {
+    width: 100%; /* Makes the image responsive, adjusting to the container's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px; /* Adjusted to match header padding for consistent height */
-    background-color: #83c4f2;
+    background-color: #1c1c1c;
 }
 
 footer p, footer a {
@@ -99,5 +131,22 @@ footer .socials a {
 
     nav ul li, footer .socials a {
         margin: 0; /* Remove margins for list items when stacked */
+    }
+}
+
+/* Existing styles for .about-image img */
+.about-image img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Media query for screens wider than 1024px */
+@media (min-width: 1024px) {
+    .about-image img {
+        width: 75%; /* Reduce image width to 75% of its container */
+        max-width: 500px; /* Optional: Set a max-width for the image */
+        display: block; /* Center the image */
+        margin: 0 auto; /* Center the image horizontally within its container */
     }
 }
