@@ -24,10 +24,34 @@ p {
     color: #ffffff;
 }
 
-/* Add line-height to h2 for about-description */
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align items vertically */
+    max-width: 80%; /* Adjust the max width as necessary */
+    margin: 0 auto; /* Center the container on the page */
+    gap: 20px; /* Add some space between the image and the description */
+}
+
+/* Styling for the image container */
+.about-image img {
+    width: 100%; /* Make the image responsive to its container's width */
+    max-width: 200px; /* Adjust maximum width of the image as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the image round */
+}
+
+/* Styling for the description section */
+.about-description {
+    flex: 1; /* Take up remaining space after the image */
+    padding: 20px; /* Add padding around the text for readability */
+}
+
 .about-description h2 {
     line-height: 1.6; /* Adjust this value as needed for optimal readability */
 }
+
+
 
 body {
     display: flex;
@@ -272,3 +296,32 @@ footer .socials a {
     }
 }
 /* +++++++++++++++++++++++++++++++++++ MEDIA  +++++++++++++++++++++++++++++++++++ */
+
+
+/* Blog Section */
+.articles {
+    max-width: 1000px; /* Maximum width of the articles container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding around the articles */
+}
+
+.article {
+    background-color: #f9f9f9ab; /* Light grey background */
+    padding: 20px; /* Padding inside each article */
+    margin-bottom: 20px; /* Space between articles */
+    border-radius: 5px; /* Rounded corners for the articles */
+}
+
+.article h3 {
+    margin: 0; /* Remove default margin from titles */
+    color: #1d1d1d; /* Dark grey color for the text */
+}
+
+.article section {
+    color: #1d1d1d;
+}
+
+.article .date {
+    color: #666; /* Lighter grey for the date */
+    font-style: italic; /* Italicize the date */
+}
